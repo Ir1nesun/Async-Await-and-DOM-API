@@ -21,7 +21,7 @@ const starWars = {
 
   searchCharacters: (query) => {
     return new Promise((resolve, reject) => {
-      fetch(`https://swapi.dev/api/people/?search=${query}`)
+      fetch(`https://swapi.py4e.com/api/people/?search=${query}`)
         .then(response => response.json())
         .then(characters => resolve(characters))
         .catch(err => console.log('searchCharacters error: ', err));
@@ -30,7 +30,7 @@ const starWars = {
 
   searchPlanets: (query) => {
     return new Promise((resolve, reject) => {
-      fetch(`https://swapi.dev/api/planets/?search=${query}`)
+      fetch(`https://swapi.py4e.com/api/planets/?search=${query}`)
         .then(response => response.json())
         .then(planets => resolve(planets))
         .catch(err => console.log('searchPlanets error: ', err));
@@ -39,7 +39,7 @@ const starWars = {
 
   searchSpecies: (query) => {
     return new Promise((resolve, reject) => {
-      fetch(`https://swapi.dev/api/species/?search=${query}`)
+      fetch(`https://swapi.py4e.com/api/species/?search=${query}`)
         .then(response => response.json())
         .then(species => resolve(species))
         .catch(err => console.log('searchSpecies error: ', err));
@@ -49,18 +49,18 @@ const starWars = {
   // --- Get By Id Methods ---
 
   getCharactersById: async (id) => (await (
-    await fetch(`https://swapi.dev/api/people/${id}`)
+    await fetch(`https://swapi.py4e.com/api/people/${id}`)
   ).json()),
 
   getPlanetsById: async (id) => (await (
-    await fetch(`https://swapi.dev/api/planets/${id}`)
+    await fetch(`https://swapi.py4e.com/api/planets/${id}`)
   ).json()),
 
   getSpeciesById: async (id) => (await (
-    await fetch(`https://swapi.dev/api/species/${id}`)
+    await fetch(`https://swapi.py4e.com/api/species/${id}`)
   ).json()),
 
   getFilmsById: async (id) => (await (
-    await fetch(`https://swapi.dev/api/films/${id}`)
+    await fetch(`https://swapi.py4e.com/api/films/${id}`)
   ).json()),
 }
